@@ -1,3 +1,4 @@
+package linkedlist;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -18,7 +19,7 @@ class Node {
 public class LinkedList {
 	public static Node head;
 
-	public void addData(LinkedList list, int data) {
+	public static void addData(int data) {
 
 		Node newNode = new Node(data);
 		if (head == null) {
@@ -33,9 +34,9 @@ public class LinkedList {
 
 	}
 
-	public static void printList(LinkedList list) {
+	public static void printList() {
 		// Iterator it=((Object) list).iterator();
-		Node temp = list.head;
+		Node temp = head;
 		while (temp != null) {
 			System.out.print(temp.data + "----");
 			temp = temp.next;
@@ -46,24 +47,24 @@ public class LinkedList {
 	public static void main(String... strings) {
 		System.out.println("Hellooooo");
 		LinkedList list = new LinkedList();
-		list.addData(list, 2);
-		list.addData(list, 4);
-		list.addData(list, 24);
+		list.addData( 2);
+		list.addData(4);
+		list.addData(24);
 		System.out.println("Inserting");
-		printList(list);
+		printList();
 
 		remove(4);
 		System.out.println("");
 		System.out.println("Deleting");
-		printList(list);
+		printList();
 		System.out.println("Deleting 2");
 		remove(2);
-		printList(list);
+		printList();
 		System.out.println("Inserting");
-		list.addData(list, 12);
-		list.addData(list, 42);
-		list.addData(list, 25);
-		printList(list);
+		list.addData(12);
+		list.addData(42);
+		list.addData(25);
+		printList();
 
 	}
 
