@@ -17,15 +17,15 @@ class Node {
 }
 
 public class LinkedList {
-	public static Node head;
+	public  Node head;
 
-	public static void addData(int data) {
+	public  void addData(LinkedList list,int data) {
 
 		Node newNode = new Node(data);
-		if (head == null) {
-			head = newNode;
+		if (list.head == null) {
+			list.head = newNode;
 		} else {
-			Node temp = head;
+			Node temp = list.head;
 			while (temp.next != null) {
 				temp = temp.next;
 			}
@@ -34,9 +34,9 @@ public class LinkedList {
 
 	}
 
-	public static void printList() {
+	public  void printList(LinkedList list) {
 		// Iterator it=((Object) list).iterator();
-		Node temp = head;
+		Node temp = list.head;
 		while (temp != null) {
 			System.out.print(temp.data + "----");
 			temp = temp.next;
@@ -47,28 +47,28 @@ public class LinkedList {
 	public static void main(String... strings) {
 		System.out.println("Hellooooo");
 		LinkedList list = new LinkedList();
-		list.addData( 2);
-		list.addData(4);
-		list.addData(24);
+		list.addData(list,2);
+		list.addData(list,4);
+		list.addData(list,24);
 		System.out.println("Inserting");
-		printList();
+		list.printList(list);
 
-		remove(4);
+		list.remove(4);
 		System.out.println("");
 		System.out.println("Deleting");
-		printList();
+		list.printList(list);
 		System.out.println("Deleting 2");
-		remove(2);
-		printList();
+		list.remove(2);
+		list.printList(list);
 		System.out.println("Inserting");
-		list.addData(12);
-		list.addData(42);
-		list.addData(25);
-		printList();
+		list.addData(list,12);
+		list.addData(list,42);
+		list.addData(list,25);
+		list.printList(list);
 
 	}
 
-	public static void remove(int i) {
+	public  void remove(int i) {
 		// TODO Auto-generated method stub
 
 		Node temp = head;
