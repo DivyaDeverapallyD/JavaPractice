@@ -10,7 +10,8 @@ import java.util.Scanner;
 /**
  * @author Divya Deverapally
  *
- *         Complexity O(n) avg and worst O(1)- element found at index 0
+ *         Complexity O(n) avg and worst 
+ *         O(1)- element found at index 0
  *
  */
 public class LinearSearch {
@@ -34,7 +35,7 @@ public class LinearSearch {
 		System.out.println("Enter value to be searched");
 		int searchNum = Integer.parseInt(sc.next());
 
-		System.out.println((linearSearch(array, searchNum) > -1) ? "Element Found" : "Element not found");
+		System.out.println((linearSearch(array, searchNum) > -1) ? "Element Found at index : " + linearSearch(array, searchNum) : "Element not found");
 
 	}
 
