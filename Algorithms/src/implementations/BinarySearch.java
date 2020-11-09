@@ -6,7 +6,8 @@ package implementations;
 import java.util.Scanner;
 
 /**
- * @author Divya Deverapally Complexity - For each iteration, the array will
+ * @author Divya Deverapally 
+ * 			Complexity - For each iteration, the array will
  *         reduce to half for K iterations the lenth become n/2^k after k
  *         iteration array length will be 1 k=n/2^k=1 1=n/2^k apply log on both
  *         sides n=2^k log n=klog2,
@@ -53,7 +54,7 @@ public class BinarySearch {
 	 * @param searchNum
 	 * @return
 	 */
-	private static int binarySearch(int[] array, int i, int j, int searchNum) {
+	private static int binarySearch(int[] array, int low, int j, int searchNum) {
 		// TODO Auto-generated method stub
 
 		int l = 0;
@@ -62,7 +63,7 @@ public class BinarySearch {
 			int m = (l + r) / 2;
 			if (array[m] == searchNum)
 				return m;
-			if (searchNum > array[m])
+			if (searchNum < array[m])
 				binarySearch(array, l, m - 1, searchNum);
 			else
 				binarySearch(array, m + 1, array.length - 1, searchNum);
