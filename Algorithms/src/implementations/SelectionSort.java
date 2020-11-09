@@ -34,7 +34,7 @@ public class SelectionSort {
 
 	}
 
-	static int[] selectionSort(int[] array) {
+	public static int[] selectionSort(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			int min = i;
 			for (int j = i + 1; j < array.length; j++) {
