@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package one;
+
+/**
+ * @author Divya Deverapally
+ *
+ *
+ */
+public class Person {
+	
+	String name;
+	int age;
+	
+
+}
